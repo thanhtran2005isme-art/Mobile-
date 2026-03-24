@@ -1,10 +1,42 @@
 <resources>
-    <string name="app_name">BanQuanAo</string>
-    <string name="action_settings">Settings</string>
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="app_name">BIDU Style</string>
+    <string name="action_settings">Cài đặt</string>
+
+    <!-- Bottom nav -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_category">Danh mục</string>
+    <string name="nav_news">Bản tin</string>
+    <string name="nav_notification">Thông báo</string>
+    <string name="nav_profile">Tôi</string>
+
+    <!-- Home -->
+    <string name="search_hint">Tìm kiếm sản phẩm…</string>
+    <string name="section_shops">Shop Đang Được Yêu Thích</string>
+    <string name="section_collections">Bộ Sưu Tập</string>
+    <string name="section_view_more">Xem thêm</string>
+
+    <!-- Hashtags -->
+    <string name="tag_bidubestie">#bidubestie</string>
+    <string name="tag_newin">#NewIn</string>
+    <string name="tag_trending">#Trending</string>
+
+    <!-- Banner -->
+    <string name="banner_title">POLO CHÀO HÈ</string>
+    <string name="banner_subtitle">Mua 2 giảm thêm 10%</string>
+    <string name="banner_cta">Khám phá</string>
+
+    <!-- Categories -->
+    <string name="cat_gia_tot">Giá Tốt</string>
+    <string name="cat_moi">Mới</string>
+    <string name="cat_cua_hang">Cửa Hàng</string>
+    <string name="cat_blook">B\'LOOK</string>
+    <string name="cat_ao">Áo</string>
+    <string name="cat_freeship">Freeship</string>
+    <string name="cat_uu_dai">Ưu Đãi</string>
+    <string name="cat_danh_gia">Đánh Giá</string>
+    <string name="cat_bidu_air">BIDU Air</string>
+    <string name="cat_do_nam">Đồ Nam</string>
+
+    <!-- Placeholders -->
+    <string name="placeholder_screen">Sắp ra mắt</string>
 </resources>

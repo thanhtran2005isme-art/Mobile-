@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Brand palette -->
+    <color name="brand_primary">#111111</color>
+    <color name="brand_secondary">#FF3B6F</color>
+    <color name="brand_accent">#FF8A00</color>
+
+    <!-- Neutrals -->
+    <color name="bg_app">#FFFFFFFF</color>
+    <color name="bg_section">#F7F7F8</color>
+    <color name="bg_chip">#111111</color>
+    <color name="bg_input">#F2F3F5</color>
+    <color name="divider">#EDEDED</color>
+    <color name="stroke_soft">#ECECEE</color>
+
+    <!-- Text -->
+    <color name="text_primary">#111111</color>
+    <color name="text_secondary">#6B6B72</color>
+    <color name="text_muted">#9A9AA1</color>
+    <color name="text_on_dark">#FFFFFFFF</color>
+    <color name="text_link">#1F8FFF</color>
+
+    <!-- Bottom nav -->
+    <color name="bn_active">#111111</color>
+    <color name="bn_inactive">#9A9AA1</color>
+
+    <!-- Category icon backgrounds -->
+    <color name="cat_red">#FFEBEC</color>
+    <color name="cat_pink">#FFE7F1</color>
+    <color name="cat_orange">#FFF1E0</color>
+    <color name="cat_yellow">#FFF8DD</color>
+    <color name="cat_green">#E7F8EC</color>
+    <color name="cat_blue">#E7F0FF</color>
+    <color name="cat_purple">#F0E7FF</color>
+    <color name="cat_gray">#F2F3F5</color>
+
+    <!-- Tag/Badge -->
+    <color name="tag_red">#E53935</color>
+    <color name="tag_top">#111111</color>
 </resources>

@@ -1,4 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <!-- Spacing scale -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">12dp</dimen>
+    <dimen name="space_lg">16dp</dimen>
+    <dimen name="space_xl">20dp</dimen>
+    <dimen name="space_2xl">24dp</dimen>
+    <dimen name="space_3xl">32dp</dimen>
+
+    <!-- Radius scale -->
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_xl">20dp</dimen>
+    <dimen name="radius_pill">100dp</dimen>
+
+    <!-- Components -->
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="header_height">56dp</dimen>
+    <dimen name="banner_height">160dp</dimen>
+    <dimen name="category_icon_size">52dp</dimen>
+    <dimen name="shop_card_width">240dp</dimen>
+    <dimen name="shop_card_image">140dp</dimen>
+    <dimen name="collection_card_width">180dp</dimen>
+    <dimen name="collection_card_height">240dp</dimen>
+
+    <!-- Text -->
+    <dimen name="text_caption">11sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_subtitle">15sp</dimen>
+    <dimen name="text_title">17sp</dimen>
+    <dimen name="text_headline">20sp</dimen>
 </resources>
