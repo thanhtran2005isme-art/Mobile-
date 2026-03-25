@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_app"
     tools:context=".ui.home.HomeFragment">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp"
+        app:liftOnScroll="true"
+        app:liftOnScrollColor="@color/white">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/layout_home_header" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
+        android:overScrollMode="never"
         android:paddingBottom="@dimen/space_3xl"
-        android:overScrollMode="never">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <include
+                android:id="@+id/banner"
+                layout="@layout/layout_home_banner" />
+
+            <!-- Placeholder cho phase tiếp theo -->
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/space_2xl"
-                android:gravity="center"
-                android:text="@string/nav_home"
-                android:textAppearance="@style/TextAppearance.App.SectionTitle"
-                tools:ignore="UseCompatTextViewDrawableXml" />
+                android:layout_height="600dp" />
 
         </LinearLayout>
 
