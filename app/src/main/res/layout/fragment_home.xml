@@ -39,10 +39,83 @@
                 android:id="@+id/banner"
                 layout="@layout/layout_home_banner" />
 
-            <!-- Placeholder cho phase tiếp theo -->
-            <View
+            <include
+                android:id="@+id/categories"
+                layout="@layout/layout_home_categories" />
+
+            <include
+                android:id="@+id/hashtags"
+                layout="@layout/layout_home_hashtags" />
+
+            <!-- Section: Shop yêu thích -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="600dp" />
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/space_lg"
+                android:paddingTop="@dimen/space_sm"
+                android:paddingBottom="@dimen/space_md">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/section_shops"
+                    android:textAppearance="@style/TextAppearance.App.SectionTitle" />
+
+                <ImageView
+                    android:id="@+id/shopMore"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_right_small" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shopRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/space_lg"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_shop" />
+
+            <!-- Section: Bộ sưu tập -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/space_lg"
+                android:paddingTop="@dimen/space_xl"
+                android:paddingBottom="@dimen/space_md">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/section_collections"
+                    android:textAppearance="@style/TextAppearance.App.SectionTitle" />
+
+                <ImageView
+                    android:id="@+id/collectionMore"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_right_small" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/collectionRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/space_lg"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_collection" />
 
         </LinearLayout>
 

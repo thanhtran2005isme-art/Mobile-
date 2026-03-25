@@ -12,13 +12,26 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.banquanao.R;
 import com.example.banquanao.ui.home.adapter.BannerAdapter;
+import com.example.banquanao.ui.home.adapter.CategoryAdapter;
+import com.example.banquanao.ui.home.adapter.CollectionAdapter;
+import com.example.banquanao.ui.home.adapter.HashtagAdapter;
+import com.example.banquanao.ui.home.adapter.ShopAdapter;
 import com.example.banquanao.ui.home.model.BannerItem;
+import com.example.banquanao.ui.home.model.CategoryItem;
+import com.example.banquanao.ui.home.model.CollectionItem;
+import com.example.banquanao.ui.home.model.HashtagItem;
+import com.example.banquanao.ui.home.model.ShopItem;
+import com.example.banquanao.ui.home.util.HorizontalSpaceDecoration;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
@@ -42,7 +55,13 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setupBanner(view);
+        setupCategories(view);
+        setupHashtags(view);
+        setupShops(view);
+        setupCollections(view);
     }
+
+    // ----- Banner ---------------------------------------------------------
 
     private void setupBanner(@NonNull View root) {
         bannerPager = root.findViewById(R.id.bannerPager);
@@ -135,6 +154,93 @@ public class HomeFragment extends Fragment {
             autoScrollRunnable = null;
         }
     }
+
+    // ----- Categories (lưới 5 cột x 2 hàng cuộn ngang) --------------------
+
+    private void setupCategories(@NonNull View root) {
+        RecyclerView recycler = root.findViewById(R.id.categoryRecycler);
+        // Grid 2 hàng, cuộn ngang -> đặt orientation=HORIZONTAL với rowCount=2
+        GridLayoutManager glm = new GridLayoutManager(
+                requireContext(), 2,
+                GridLayoutManager.HORIZONTAL, false);
+        recycler.setLayoutManager(glm);
+        recycler.setAdapter(new CategoryAdapter(buildCategoryData()));
+        recycler.setNestedScrollingEnabled(false);
+    }
+
+    private List<CategoryItem> buildCategoryData() {
+        return Arrays.asList(
+                new CategoryItem(R.drawable.ic_cat_gia_tot, R.color.cat_red, getString(R.string.cat_gia_tot)),
+                new CategoryItem(R.drawable.ic_cat_freeship, R.color.cat_orange, getString(R.string.cat_freeship)),
+                new CategoryItem(R.drawable.ic_cat_new, R.color.cat_pink, getString(R.string.cat_moi)),
+                new CategoryItem(R.drawable.ic_cat_sale, R.color.cat_red, getString(R.string.cat_uu_dai)),
+                new CategoryItem(R.drawable.ic_cat_store, R.color.cat_orange, getString(R.string.cat_cua_hang)),
+                new CategoryItem(R.drawable.ic_cat_star, R.color.cat_yellow, getString(R.string.cat_danh_gia)),
+                new CategoryItem(R.drawable.ic_cat_blook, R.color.cat_pink, getString(R.string.cat_blook)),
+                new CategoryItem(R.drawable.ic_cat_air, R.color.cat_green, getString(R.string.cat_bidu_air)),
+                new CategoryItem(R.drawable.ic_cat_shirt, R.color.cat_purple, getString(R.string.cat_ao)),
+                new CategoryItem(R.drawable.ic_cat_man, R.color.cat_blue, getString(R.string.cat_do_nam))
+        );
+    }
+
+    // ----- Hashtag chips --------------------------------------------------
+
+    private void setupHashtags(@NonNull View root) {
+        RecyclerView recycler = root.findViewById(R.id.hashtagRecycler);
+        recycler.setLayoutManager(new LinearLayoutManager(
+                requireContext(), LinearLayoutManager.HORIZONTAL, false));
+        recycler.addItemDecoration(new HorizontalSpaceDecoration(dp(8), true));
+        recycler.setAdapter(new HashtagAdapter(buildHashtagData()));
+        recycler.setNestedScrollingEnabled(false);
+    }
+
+    private List<HashtagItem> buildHashtagData() {
+        return Arrays.asList(
+                new HashtagItem(getString(R.string.tag_bidubestie)),
+                new HashtagItem(getString(R.string.tag_newin)),
+                new HashtagItem(getString(R.string.tag_trending))
+        );
+    }
+
+    // ----- Shops yêu thích -----------------------------------------------
+
+    private void setupShops(@NonNull View root) {
+        RecyclerView recycler = root.findViewById(R.id.shopRecycler);
+        recycler.setLayoutManager(new LinearLayoutManager(
+                requireContext(), LinearLayoutManager.HORIZONTAL, false));
+        recycler.addItemDecoration(new HorizontalSpaceDecoration(dp(12), true));
+        recycler.setAdapter(new ShopAdapter(buildShopData()));
+        recycler.setNestedScrollingEnabled(false);
+    }
+
+    private List<ShopItem> buildShopData() {
+        return Arrays.asList(
+                new ShopItem(R.drawable.bg_shop_1, "E", "ESTHER ST.", "Thương hiệu xuất xứ …", true),
+                new ShopItem(R.drawable.bg_shop_2, "X", "Xexymix", "Bán phối athleisure", false),
+                new ShopItem(R.drawable.bg_shop_3, "L", "LIBÉ", "Thời trang nữ tinh tế", false)
+        );
+    }
+
+    // ----- Bộ sưu tập -----------------------------------------------------
+
+    private void setupCollections(@NonNull View root) {
+        RecyclerView recycler = root.findViewById(R.id.collectionRecycler);
+        recycler.setLayoutManager(new LinearLayoutManager(
+                requireContext(), LinearLayoutManager.HORIZONTAL, false));
+        recycler.addItemDecoration(new HorizontalSpaceDecoration(dp(12), true));
+        recycler.setAdapter(new CollectionAdapter(buildCollectionData()));
+        recycler.setNestedScrollingEnabled(false);
+    }
+
+    private List<CollectionItem> buildCollectionData() {
+        return Arrays.asList(
+                new CollectionItem(R.drawable.bg_collection_1, "Hè rực rỡ", "Mới ra mắt"),
+                new CollectionItem(R.drawable.bg_collection_2, "Phong cách phố", "Trending"),
+                new CollectionItem(R.drawable.bg_collection_3, "Tối giản", "Best seller")
+        );
+    }
+
+    // ----- Helpers --------------------------------------------------------
 
     private int dp(int value) {
         return (int) (value * getResources().getDisplayMetrics().density);
