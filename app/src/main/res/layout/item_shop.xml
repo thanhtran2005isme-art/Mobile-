@@ -4,19 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/shop_card_width"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/space_md">
 
-    <!-- Cover with TOP badge -->
-    <com.google.android.material.card.MaterialCardView
+    <!-- Khối cover + avatar nhô + badge TOP -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/shop_card_image"
-        app:cardCornerRadius="@dimen/radius_lg"
-        app:cardElevation="0dp"
-        app:strokeWidth="0dp">
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
 
-        <FrameLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="@dimen/shop_card_image"
+            app:cardCornerRadius="@dimen/radius_lg"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
 
             <ImageView
                 android:id="@+id/shopCover"
@@ -26,34 +29,40 @@
                 android:scaleType="centerCrop"
                 tools:src="@drawable/bg_shop_1" />
 
-            <TextView
-                android:id="@+id/shopTopBadge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|bottom"
-                android:background="@drawable/bg_top_badge"
-                android:paddingHorizontal="@dimen/space_sm"
-                android:paddingVertical="2dp"
-                android:text="TOP"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_caption"
-                android:textStyle="bold"
-                android:visibility="gone"
-                tools:visibility="visible" />
-        </FrameLayout>
-    </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.card.MaterialCardView>
 
-    <!-- Avatar overlapping above the row -->
+        <!-- Badge TOP góc trên-trái -->
+        <TextView
+            android:id="@+id/shopTopBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:background="@drawable/bg_top_badge"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:text="TOP"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_caption"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+    <!-- Hàng dưới: avatar (đè lên cover) + tên + mô tả + nút follow -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_marginTop="-22dp">
 
+        <!-- Avatar nhô lên đè vào cover -->
         <FrameLayout
             android:id="@+id/shopAvatar"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:layout_marginStart="@dimen/space_md"
-            android:layout_marginTop="-22dp"
             android:background="@drawable/bg_avatar_circle">
 
             <TextView
@@ -66,9 +75,10 @@
                 android:textStyle="bold"
                 tools:text="E" />
         </FrameLayout>
+
     </FrameLayout>
 
-    <!-- Info row -->
+    <!-- Hàng thông tin -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,13 +87,18 @@
         android:orientation="horizontal"
         android:paddingHorizontal="@dimen/space_md">
 
-        <ImageView
+        <FrameLayout
             android:id="@+id/shopFollow"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:background="@drawable/bg_follow_circle"
-            android:padding="3dp"
-            android:src="@drawable/ic_plus" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_follow_circle">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_plus" />
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="0dp"
