@@ -17,7 +17,6 @@
         app:liftOnScrollColor="@color/white">
 
         <include
-            android:id="@+id/header"
             layout="@layout/layout_home_header" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -36,15 +35,12 @@
             android:orientation="vertical">
 
             <include
-                android:id="@+id/banner"
                 layout="@layout/layout_home_banner" />
 
             <include
-                android:id="@+id/categories"
                 layout="@layout/layout_home_categories" />
 
             <include
-                android:id="@+id/hashtags"
                 layout="@layout/layout_home_hashtags" />
 
             <!-- Section: Shop yêu thích -->
