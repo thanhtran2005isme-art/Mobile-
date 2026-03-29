@@ -43,19 +43,16 @@ public class CollectionAdapter extends RecyclerView.Adapter<CollectionAdapter.Co
     static class CollectionVH extends RecyclerView.ViewHolder {
         private final ImageView image;
         private final TextView title;
-        private final TextView subtitle;
 
         CollectionVH(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.collectionImage);
             title = itemView.findViewById(R.id.collectionTitle);
-            subtitle = itemView.findViewById(R.id.collectionSubtitle);
         }
 
         void bind(CollectionItem item) {
             image.setImageResource(item.imageRes);
             title.setText(item.title);
-            subtitle.setText(item.subtitle);
         }
     }
 }
