@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,12 +23,15 @@ import com.example.banquanao.ui.home.adapter.BannerAdapter;
 import com.example.banquanao.ui.home.adapter.CategoryAdapter;
 import com.example.banquanao.ui.home.adapter.CollectionAdapter;
 import com.example.banquanao.ui.home.adapter.HashtagAdapter;
+import com.example.banquanao.ui.home.adapter.ProductAdapter;
 import com.example.banquanao.ui.home.adapter.ShopAdapter;
 import com.example.banquanao.ui.home.model.BannerItem;
 import com.example.banquanao.ui.home.model.CategoryItem;
 import com.example.banquanao.ui.home.model.CollectionItem;
 import com.example.banquanao.ui.home.model.HashtagItem;
+import com.example.banquanao.ui.home.model.ProductItem;
 import com.example.banquanao.ui.home.model.ShopItem;
+import com.example.banquanao.ui.home.util.GridSpaceDecoration;
 import com.example.banquanao.ui.home.util.HorizontalSpaceDecoration;
 
 import java.util.ArrayList;
@@ -59,6 +63,7 @@ public class HomeFragment extends Fragment {
         setupHashtags(view);
         setupShops(view);
         setupCollections(view);
+        setupRecommend(view);
     }
 
     // ----- Banner ---------------------------------------------------------
@@ -155,11 +160,10 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    // ----- Categories (lưới 5 cột x 2 hàng cuộn ngang) --------------------
+    // ----- Categories -----------------------------------------------------
 
     private void setupCategories(@NonNull View root) {
         RecyclerView recycler = root.findViewById(R.id.categoryRecycler);
-        // Grid 2 hàng, cuộn ngang -> đặt orientation=HORIZONTAL với rowCount=2
         GridLayoutManager glm = new GridLayoutManager(
                 requireContext(), 2,
                 GridLayoutManager.HORIZONTAL, false);
@@ -234,9 +238,31 @@ public class HomeFragment extends Fragment {
 
     private List<CollectionItem> buildCollectionData() {
         return Arrays.asList(
-                new CollectionItem(R.drawable.bg_collection_1, "Hè rực rỡ", "Mới ra mắt"),
-                new CollectionItem(R.drawable.bg_collection_2, "Phong cách phố", "Trending"),
-                new CollectionItem(R.drawable.bg_collection_3, "Tối giản", "Best seller")
+                new CollectionItem(R.drawable.bg_collection_1, "Beautiful lies"),
+                new CollectionItem(R.drawable.bg_collection_2, "Hai mặt không bao giờ"),
+                new CollectionItem(R.drawable.bg_collection_3, "Tối giản")
+        );
+    }
+
+    // ----- Gợi ý riêng (Grid 2 cột) --------------------------------------
+
+    private void setupRecommend(@NonNull View root) {
+        TextView title = root.findViewById(R.id.recommendTitle);
+        title.setText(getString(R.string.section_recommend, getString(R.string.default_username)));
+
+        RecyclerView recycler = root.findViewById(R.id.productRecycler);
+        recycler.setLayoutManager(new GridLayoutManager(requireContext(), 2));
+        recycler.addItemDecoration(new GridSpaceDecoration(dp(12), 2));
+        recycler.setAdapter(new ProductAdapter(buildProductData()));
+        recycler.setNestedScrollingEnabled(false);
+    }
+
+    private List<ProductItem> buildProductData() {
+        return Arrays.asList(
+                new ProductItem(R.drawable.bg_product_1, "ksksn", "100.000.000đ", "áo sơ mi", true, false),
+                new ProductItem(R.drawable.bg_product_2, "jdksdb", "150.000đ", "áo thun", true, true),
+                new ProductItem(R.drawable.bg_product_3, "store_x", "390.000đ", "quần jean", false, false),
+                new ProductItem(R.drawable.bg_product_4, "trendy", "550.000đ", "áo khoác", false, false)
         );
     }
 

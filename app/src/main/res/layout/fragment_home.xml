@@ -16,8 +16,7 @@
         app:liftOnScroll="true"
         app:liftOnScrollColor="@color/white">
 
-        <include
-            layout="@layout/layout_home_header" />
+        <include layout="@layout/layout_home_header" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -34,14 +33,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include
-                layout="@layout/layout_home_banner" />
+            <include layout="@layout/layout_home_banner" />
 
-            <include
-                layout="@layout/layout_home_categories" />
+            <include layout="@layout/layout_home_categories" />
 
-            <include
-                layout="@layout/layout_home_hashtags" />
+            <include layout="@layout/layout_home_hashtags" />
 
             <!-- Section: Shop yêu thích -->
             <LinearLayout
@@ -95,11 +91,6 @@
                     android:text="@string/section_collections"
                     android:textAppearance="@style/TextAppearance.App.SectionTitle" />
 
-                <ImageView
-                    android:id="@+id/collectionMore"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_arrow_right_small" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -112,6 +103,42 @@
                 android:paddingHorizontal="@dimen/space_lg"
                 tools:itemCount="3"
                 tools:listitem="@layout/item_collection" />
+
+            <!-- Section: Gợi ý riêng -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/space_lg"
+                android:paddingTop="@dimen/space_xl"
+                android:paddingBottom="@dimen/space_md">
+
+                <TextView
+                    android:id="@+id/recommendTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.App.SectionTitle"
+                    tools:text="Gợi Ý Riêng Cho thanh" />
+
+                <ImageView
+                    android:id="@+id/recommendMore"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_right_small" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/space_lg"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_product" />
 
         </LinearLayout>
 
