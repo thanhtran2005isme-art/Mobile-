@@ -13,7 +13,13 @@
     <string name="search_hint">Tìm kiếm sản phẩm…</string>
     <string name="section_shops">Shop Đang Được Yêu Thích</string>
     <string name="section_collections">Bộ Sưu Tập</string>
+    <string name="section_recommend">Gợi Ý Riêng Cho %1$s</string>
     <string name="section_view_more">Xem thêm</string>
+    <string name="default_username">bạn</string>
+
+    <!-- Product -->
+    <string name="tag_preorder">Pre-order</string>
+    <string name="price_format">%1$sđ</string>
 
     <!-- Hashtags -->
     <string name="tag_bidubestie">#bidubestie</string>

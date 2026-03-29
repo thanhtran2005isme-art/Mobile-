@@ -25,6 +25,7 @@
     <dimen name="shop_card_image">130dp</dimen>
     <dimen name="collection_card_width">180dp</dimen>
     <dimen name="collection_card_height">240dp</dimen>
+    <dimen name="product_image_height">220dp</dimen>
 
     <!-- Text -->
     <dimen name="text_caption">11sp</dimen>

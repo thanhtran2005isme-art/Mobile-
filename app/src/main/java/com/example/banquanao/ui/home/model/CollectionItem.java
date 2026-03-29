@@ -11,11 +11,9 @@ public class CollectionItem {
     public final int imageRes;
 
     public final String title;
-    public final String subtitle;
 
-    public CollectionItem(@DrawableRes int imageRes, String title, String subtitle) {
+    public CollectionItem(@DrawableRes int imageRes, String title) {
         this.imageRes = imageRes;
         this.title = title;
-        this.subtitle = subtitle;
     }
 }
