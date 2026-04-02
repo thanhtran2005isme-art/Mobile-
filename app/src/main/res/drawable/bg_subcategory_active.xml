@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Item sub-category đang active: nền trắng + thanh đen dọc bên trái -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    <item
+        android:width="3dp"
+        android:gravity="left">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/brand_primary" />
+        </shape>
+    </item>
+</layer-list>
