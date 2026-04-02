@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/cat_top_tabs_height"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/space_md"
+    android:paddingTop="@dimen/space_sm">
+
+    <TextView
+        android:id="@+id/tabLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_subtitle"
+        tools:text="Phụ nữ" />
+
+    <View
+        android:id="@+id/tabIndicator"
+        android:layout_width="20dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="@dimen/space_xs"
+        android:background="@drawable/bg_tab_indicator"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+</LinearLayout>

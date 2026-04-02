@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.category.CategoryFragment">
+
+    <!-- Header -->
+    <include layout="@layout/layout_category_header" />
+
+    <!-- Top tabs -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/topTabRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingHorizontal="@dimen/space_lg"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_top_tab" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/divider" />
+    </FrameLayout>
+
+    <!-- Body: sidebar + grid -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Sidebar trái -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/subCategoryRecycler"
+            android:layout_width="@dimen/cat_sidebar_width"
+            android:layout_height="match_parent"
+            android:background="@color/bg_section"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_subcategory" />
+
+        <!-- Nội dung phải -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/space_md">
+
+            <TextView
+                android:id="@+id/gridTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_lg"
+                android:paddingBottom="@dimen/space_md"
+                android:text="@string/category_choose_for_you"
+                android:textAppearance="@style/TextAppearance.App.SectionTitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryGridRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                tools:itemCount="6"
+                tools:listitem="@layout/item_category_grid" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
