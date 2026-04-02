@@ -45,4 +45,26 @@
 
     <!-- Placeholders -->
     <string name="placeholder_screen">Sắp ra mắt</string>
+
+    <!-- Category page -->
+    <string name="category_search_hint">Ice Blue</string>
+    <string name="category_choose_for_you">Lựa chọn cho bạn</string>
+    <string name="cat_tab_all">Tất cả</string>
+    <string name="cat_tab_women">Phụ nữ</string>
+    <string name="cat_tab_curve">Đường cong</string>
+    <string name="cat_tab_kids">Trẻ em</string>
+    <string name="cat_tab_men">Đồ nam</string>
+    <string name="cat_tab_accessory">Phụ kiện</string>
+    <string name="cat_tab_beauty">Làm đẹp</string>
+    <string name="cat_sub_dress">Váy</string>
+    <string name="cat_sub_clothes">Quần áo</string>
+    <string name="cat_sub_wedding">Đầm cưới &amp; sự kiện</string>
+    <string name="cat_sub_underwear">Đồ lót &amp; pijama</string>
+    <string name="cat_sub_workwear">Đồ công sở</string>
+    <string name="cat_item_wedding_dress">Váy cưới</string>
+    <string name="cat_item_cocktail">Váy cocktail</string>
+    <string name="cat_item_evening">Váy dạ hội</string>
+    <string name="cat_item_maxi">Váy maxi</string>
+    <string name="cat_item_mini">Váy mini</string>
+    <string name="cat_item_midi">Váy midi</string>
 </resources>
