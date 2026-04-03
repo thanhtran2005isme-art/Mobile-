@@ -3,7 +3,6 @@ package com.example.banquanao.ui.category.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -48,7 +47,7 @@ public class CategoryGridAdapter extends RecyclerView.Adapter<CategoryGridAdapte
     }
 
     static class GridVH extends RecyclerView.ViewHolder {
-        private final ImageView image;
+        private final View image;
         private final TextView label;
 
         GridVH(@NonNull View itemView) {

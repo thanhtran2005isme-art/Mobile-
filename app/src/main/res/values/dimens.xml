@@ -28,8 +28,8 @@
     <dimen name="product_image_height">220dp</dimen>
 
     <!-- Category page -->
-    <dimen name="cat_sidebar_width">120dp</dimen>
-    <dimen name="cat_circle_size">80dp</dimen>
+    <dimen name="cat_sidebar_width">110dp</dimen>
+    <dimen name="cat_circle_size">64dp</dimen>
     <dimen name="cat_top_tabs_height">44dp</dimen>
 
     <!-- Text -->

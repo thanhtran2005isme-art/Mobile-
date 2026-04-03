@@ -8,13 +8,13 @@
     android:focusable="true"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingVertical="@dimen/space_sm">
+    android:paddingHorizontal="@dimen/space_xs"
+    android:paddingVertical="@dimen/space_md">
 
-    <ImageView
+    <View
         android:id="@+id/gridImage"
         android:layout_width="@dimen/cat_circle_size"
         android:layout_height="@dimen/cat_circle_size"
-        android:contentDescription="@null"
         tools:background="@drawable/bg_circle_purple" />
 
     <TextView
@@ -26,7 +26,7 @@
         android:gravity="center"
         android:maxLines="2"
         android:textColor="@color/text_primary"
-        android:textSize="@dimen/text_body"
+        android:textSize="@dimen/text_small"
         tools:text="Váy cưới" />
 
 </LinearLayout>
