@@ -67,4 +67,39 @@
     <string name="cat_item_maxi">Váy maxi</string>
     <string name="cat_item_mini">Váy mini</string>
     <string name="cat_item_midi">Váy midi</string>
+
+    <!-- Profile page -->
+    <string name="profile_name">thanh</string>
+    <string name="profile_phone_role">0906264126 | Quản trị</string>
+    <string name="profile_edit">Chỉnh sửa</string>
+    <string name="profile_logout">Đăng xuất</string>
+
+    <string name="profile_orders">Đơn mua</string>
+    <string name="profile_orders_link">Xem lịch sử mua hàng (%1$d)</string>
+    <string name="profile_pending_confirm">Chờ xác nhận</string>
+    <string name="profile_pending_pickup">Chờ lấy hàng</string>
+    <string name="profile_pending_delivery">Chờ giao hàng</string>
+    <string name="profile_review">Đánh giá</string>
+
+    <string name="profile_utilities">Tiện ích của tôi</string>
+    <string name="profile_voucher">Ưu đãi</string>
+    <string name="profile_points">Điểm</string>
+    <string name="profile_wallet">Ví</string>
+
+    <string name="profile_services">Dịch vụ thời trang</string>
+    <string name="profile_view_more">Xem thêm</string>
+    <string name="profile_favorite">Yêu thích</string>
+    <string name="profile_address">Địa chỉ</string>
+    <string name="profile_style">Phong cách</string>
+
+    <string name="profile_admin">Quản trị</string>
+    <string name="profile_admin_desc">Mở bảng điều khiển quản trị và quản lý tài nguyên của ứng dụng</string>
+    <string name="profile_admin_panel">Trang quản trị</string>
+    <string name="profile_admin_panel_desc">Bảng điều khiển, người dùng, nội dung và ưu đãi</string>
+
+    <string name="profile_support">Hỗ trợ</string>
+    <string name="profile_help_center">Trung tâm trợ giúp</string>
+    <string name="profile_my_notification">Thông báo của tôi</string>
+    <string name="profile_customer_care">Chăm sóc khách hàng</string>
+    <string name="profile_purchase_policy">Chính sách mua hàng</string>
 </resources>

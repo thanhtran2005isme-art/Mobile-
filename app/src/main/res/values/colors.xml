@@ -41,4 +41,11 @@
     <!-- Tag/Badge -->
     <color name="tag_red">#E53935</color>
     <color name="tag_top">#111111</color>
+
+    <!-- Profile page -->
+    <color name="profile_orange">#FF6F1A</color>
+    <color name="profile_orange_dark">#E55A0A</color>
+    <color name="profile_card_stroke">#EEEEEE</color>
+    <color name="profile_subcard_bg">#FFFFFF</color>
+    <color name="profile_icon_bg">#FFF3EC</color>
 </resources>

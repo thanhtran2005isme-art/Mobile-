@@ -32,6 +32,10 @@
     <dimen name="cat_circle_size">64dp</dimen>
     <dimen name="cat_top_tabs_height">44dp</dimen>
 
+    <!-- Profile page -->
+    <dimen name="profile_avatar_size">64dp</dimen>
+    <dimen name="profile_action_icon_size">24dp</dimen>
+
     <!-- Text -->
     <dimen name="text_caption">11sp</dimen>
     <dimen name="text_small">12sp</dimen>
