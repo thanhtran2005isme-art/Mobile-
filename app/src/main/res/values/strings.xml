@@ -71,6 +71,7 @@
     <!-- Profile page -->
     <string name="profile_name">thanh</string>
     <string name="profile_phone_role">0906264126 | Quản trị</string>
+    <string name="profile_phone_role_format">%1$s | %2$s</string>
     <string name="profile_edit">Chỉnh sửa</string>
     <string name="profile_logout">Đăng xuất</string>
 
@@ -102,4 +103,39 @@
     <string name="profile_my_notification">Thông báo của tôi</string>
     <string name="profile_customer_care">Chăm sóc khách hàng</string>
     <string name="profile_purchase_policy">Chính sách mua hàng</string>
+
+    <!-- Login / Register -->
+    <string name="login_brand">Kaito</string>
+    <string name="login_tagline_1">Thử ngàn bộ đồ</string>
+    <string name="login_tagline_2">chỉ với một bức ảnh.</string>
+    <string name="login_subtitle">Đăng nhập hoặc đăng ký để bắt đầu.</string>
+    <string name="login_phone_btn">Đăng nhập bằng Số Điện thoại</string>
+    <string name="login_apple">Tiếp tục với Apple</string>
+    <string name="login_google">Tiếp tục với Google</string>
+    <string name="login_tiktok">Tiếp tục với TikTok</string>
+    <string name="login_or">hoặc</string>
+    <string name="login_email_phone_hint">Email hoặc Số Điện thoại</string>
+    <string name="login_password_hint">Mật khẩu</string>
+    <string name="login_submit">ĐĂNG NHẬP</string>
+    <string name="login_forgot">Quên mật khẩu?</string>
+    <string name="login_face_id">Face ID / Vân tay</string>
+    <string name="login_no_account">Chưa có tài khoản?</string>
+    <string name="login_register_link">Đăng ký ngay</string>
+
+    <string name="register_title_1">Tạo Bản Sao</string>
+    <string name="register_title_2">Phong Cách Của Bạn</string>
+    <string name="register_subtitle">Chỉ mất 30 giây để bắt đầu mua sắm cùng Kaito.</string>
+    <string name="register_name_hint">Họ và Tên</string>
+    <string name="register_phone_hint">Số Điện thoại</string>
+    <string name="register_password_hint">Mật khẩu (tùy chọn)</string>
+    <string name="register_submit">ĐĂNG KÝ NGAY</string>
+    <string name="register_or_quick">Hoặc đăng ký nhanh bằng</string>
+    <string name="register_have_account">Đã có tài khoản?</string>
+    <string name="register_login_link">Đăng nhập</string>
+
+    <string name="error_phone_required">Vui lòng nhập số điện thoại</string>
+    <string name="error_password_required">Vui lòng nhập mật khẩu</string>
+    <string name="error_invalid_credentials">Số điện thoại hoặc mật khẩu không đúng</string>
+    <string name="error_name_required">Vui lòng nhập họ tên</string>
+    <string name="register_success">Đăng ký thành công, vui lòng đăng nhập</string>
 </resources>

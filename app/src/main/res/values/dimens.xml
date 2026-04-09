@@ -36,6 +36,11 @@
     <dimen name="profile_avatar_size">64dp</dimen>
     <dimen name="profile_action_icon_size">24dp</dimen>
 
+    <!-- Login -->
+    <dimen name="login_input_height">52dp</dimen>
+    <dimen name="login_btn_height">52dp</dimen>
+    <dimen name="login_social_size">52dp</dimen>
+
     <!-- Text -->
     <dimen name="text_caption">11sp</dimen>
     <dimen name="text_small">12sp</dimen>

@@ -48,4 +48,17 @@
     <color name="profile_card_stroke">#EEEEEE</color>
     <color name="profile_subcard_bg">#FFFFFF</color>
     <color name="profile_icon_bg">#FFF3EC</color>
+
+    <!-- Login screen -->
+    <color name="login_bg">#0B0B12</color>
+    <color name="login_glow">#5B21B6</color>
+    <color name="login_input_bg">#16161E</color>
+    <color name="login_input_stroke">#2A2A36</color>
+    <color name="login_text_primary">#FFFFFF</color>
+    <color name="login_text_secondary">#A1A1AA</color>
+    <color name="login_text_muted">#6B6B72</color>
+    <color name="login_link">#A78BFA</color>
+    <color name="login_btn_gradient_start">#A78BFA</color>
+    <color name="login_btn_gradient_mid">#7C7BFF</color>
+    <color name="login_btn_gradient_end">#5BB0FF</color>
 </resources>
