@@ -35,6 +35,13 @@
             android:exported="false"
             android:configChanges="uiMode|orientation|screenSize"
             android:theme="@style/Theme.BanQuanAo" />
+
+        <activity
+            android:name=".ui.admin.AdminActivity"
+            android:exported="false"
+            android:configChanges="uiMode|orientation|screenSize"
+            android:theme="@style/Theme.BanQuanAo"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
