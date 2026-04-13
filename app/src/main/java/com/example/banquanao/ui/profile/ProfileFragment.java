@@ -100,6 +100,12 @@ public class ProfileFragment extends Fragment {
             adminSection.setVisibility(session.isCurrentUserAdmin()
                     ? View.VISIBLE : View.GONE);
         }
+        View adminPanel = root.findViewById(R.id.cardAdminPanel);
+        if (adminPanel != null) {
+            adminPanel.setOnClickListener(v -> startActivity(
+                    new Intent(requireContext(),
+                            com.example.banquanao.ui.admin.AdminActivity.class)));
+        }
     }
 
     private void bindLogout(@NonNull View root) {
