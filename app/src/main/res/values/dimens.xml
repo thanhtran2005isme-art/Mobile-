@@ -41,6 +41,10 @@
     <dimen name="login_btn_height">52dp</dimen>
     <dimen name="login_social_size">52dp</dimen>
 
+    <!-- Admin -->
+    <dimen name="admin_stat_min_height">96dp</dimen>
+    <dimen name="admin_shortcut_min_height">120dp</dimen>
+
     <!-- Text -->
     <dimen name="text_caption">11sp</dimen>
     <dimen name="text_small">12sp</dimen>

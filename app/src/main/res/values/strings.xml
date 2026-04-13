@@ -138,4 +138,36 @@
     <string name="error_invalid_credentials">Số điện thoại hoặc mật khẩu không đúng</string>
     <string name="error_name_required">Vui lòng nhập họ tên</string>
     <string name="register_success">Đăng ký thành công, vui lòng đăng nhập</string>
+
+    <!-- Admin -->
+    <string name="admin_title">Tổng quan</string>
+    <string name="admin_logout">Đăng xuất</string>
+    <string name="admin_hero_label">Màn vào quản trị</string>
+    <string name="admin_hero_hello">Xin chào, %1$s</string>
+    <string name="admin_hero_subtitle">Xem nhanh tình hình cửa hàng và đi tới các mục quản lý chính.</string>
+
+    <string name="admin_quick_overview">Tổng quan nhanh</string>
+    <string name="admin_stat_products">Tổng sản phẩm</string>
+    <string name="admin_stat_products_desc">Sản phẩm đang lưu</string>
+    <string name="admin_stat_pending">Đơn chờ xác nhận</string>
+    <string name="admin_stat_pending_desc">Cần xử lý ngay</string>
+    <string name="admin_stat_customers">Khách hàng</string>
+    <string name="admin_stat_customers_desc">Tài khoản khách</string>
+    <string name="admin_stat_categories">Danh mục</string>
+    <string name="admin_stat_categories_desc">Danh mục nhiều cấp</string>
+
+    <string name="admin_voucher_title">Voucher</string>
+    <string name="admin_voucher_desc">Tạo, gán, chỉnh sửa và ẩn hiện voucher cho khách hàng</string>
+
+    <string name="admin_shortcuts">Lối tắt quản lý</string>
+    <string name="admin_shortcut_products">Sản phẩm</string>
+    <string name="admin_shortcut_products_desc">Danh sách, thêm, sửa xóa sản phẩm</string>
+    <string name="admin_shortcut_categories">Danh mục</string>
+    <string name="admin_shortcut_categories_desc">Quản lý danh mục cha và con thiết kế</string>
+    <string name="admin_shortcut_orders">Đơn hàng</string>
+    <string name="admin_shortcut_orders_desc">Xem danh sách và cần xử lý trong thời gian thực</string>
+    <string name="admin_shortcut_customers">Khách hàng</string>
+    <string name="admin_shortcut_customers_desc">Xem tài khoản và lịch sử mua hàng</string>
+
+    <string name="admin_recent">Hoạt động gần đây</string>
 </resources>
