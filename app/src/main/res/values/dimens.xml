@@ -45,6 +45,12 @@
     <dimen name="admin_stat_min_height">96dp</dimen>
     <dimen name="admin_shortcut_min_height">120dp</dimen>
 
+    <!-- Admin product -->
+    <dimen name="admin_product_thumb">96dp</dimen>
+    <dimen name="admin_step_dot_size">36dp</dimen>
+    <dimen name="admin_field_height">52dp</dimen>
+    <dimen name="admin_field_textarea_height">96dp</dimen>
+
     <!-- Text -->
     <dimen name="text_caption">11sp</dimen>
     <dimen name="text_small">12sp</dimen>

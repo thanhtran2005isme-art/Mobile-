@@ -170,4 +170,99 @@
     <string name="admin_shortcut_customers_desc">Xem tài khoản và lịch sử mua hàng</string>
 
     <string name="admin_recent">Hoạt động gần đây</string>
+
+    <!-- Admin: Product list -->
+    <string name="admin_product_title">Quản lý sản phẩm</string>
+    <string name="admin_product_subtitle">Tìm nhanh, lọc chính xác và xử lý từng sản phẩm ngay trên một màn.</string>
+    <string name="admin_product_search_hint">Tìm theo tên sản phẩm hoặc mã sản phẩm</string>
+    <string name="admin_filter_all">Tất cả</string>
+    <string name="admin_filter_selling">Đang bán</string>
+    <string name="admin_filter_sold_out">Hết hàng</string>
+    <string name="admin_filter_draft">Nháp</string>
+    <string name="admin_filter_category">Danh mục: %1$s</string>
+    <string name="admin_filter_collection">Bộ sưu tập: %1$s</string>
+    <string name="admin_filter_value_all">Tất cả</string>
+    <string name="admin_product_count">Hiển thị %1$d/%2$d sản phẩm</string>
+    <string name="admin_product_empty">Chưa có sản phẩm nào</string>
+
+    <string name="admin_product_status_visible">Đang hiển thị</string>
+    <string name="admin_product_status_hidden">Đã ẩn</string>
+    <string name="admin_product_field_category">Danh mục: %1$s</string>
+    <string name="admin_product_field_collection">Bộ sưu tập: %1$s</string>
+    <string name="admin_product_field_sku">Mã SP: %1$s</string>
+    <string name="admin_product_field_stock">Tồn kho %1$d</string>
+    <string name="admin_product_action_edit">Sửa</string>
+    <string name="admin_product_action_hide">Ẩn</string>
+    <string name="admin_product_action_show">Hiện</string>
+    <string name="admin_product_action_delete">Xóa</string>
+    <string name="admin_product_add">Thêm sản phẩm</string>
+
+    <!-- Admin: Add product wizard -->
+    <string name="add_product_title">Thêm sản phẩm</string>
+    <string name="add_product_subtitle">Chỉ giữ các trường thực sự dùng cho trang chi tiết sản phẩm và danh sách bán hàng.</string>
+    <string name="add_product_step_format">Bước %1$d/%2$d</string>
+
+    <string name="add_product_step1">Thông tin chính</string>
+    <string name="add_product_step1_desc">Nhập tên sản phẩm, mô tả ngắn và mô tả chi tiết cho trang chi tiết sản phẩm.</string>
+    <string name="add_product_step2">Mã &amp; giá bán</string>
+    <string name="add_product_step2_desc">Nhập mã sản phẩm, giá bán và số lượng tồn kho.</string>
+    <string name="add_product_step3">Hình ảnh</string>
+    <string name="add_product_step3_desc">Chọn ảnh đại diện cho sản phẩm. Có thể thay sau khi tạo.</string>
+    <string name="add_product_step4">Phân loại</string>
+    <string name="add_product_step4_desc">Gán sản phẩm vào danh mục và bộ sưu tập phù hợp.</string>
+    <string name="add_product_step5">Xuất bản</string>
+    <string name="add_product_step5_desc">Chọn trạng thái và hiển thị trước khi lưu sản phẩm.</string>
+
+    <!-- Step 1 fields -->
+    <string name="add_product_name">Tên sản phẩm</string>
+    <string name="add_product_short_desc">Mô tả ngắn</string>
+    <string name="add_product_short_desc_hint">Đoạn mô tả ngắn hiển thị ngay đầu trang chi tiết.</string>
+    <string name="add_product_full_desc">Mô tả chi tiết</string>
+    <string name="add_product_full_desc_hint">Mô tả đầy đủ cho phần thông tin sản phẩm.</string>
+    <string name="add_product_material">Chất liệu</string>
+    <string name="add_product_material_hint">Cotton pha</string>
+    <string name="add_product_style">Phong cách</string>
+    <string name="add_product_style_hint">Pre-order</string>
+    <string name="add_product_brand">Thương hiệu</string>
+    <string name="add_product_brand_hint">kaito.fashion</string>
+    <string name="add_product_pattern">Họa tiết</string>
+    <string name="add_product_pattern_hint">Trơn</string>
+    <string name="add_product_season">Mùa</string>
+    <string name="add_product_season_hint">Hè, Thu, Xuân, Đông</string>
+    <string name="add_product_body">Dáng người</string>
+    <string name="add_product_body_hint">Mọi dáng người</string>
+    <string name="add_product_gender">Giới tính</string>
+    <string name="add_product_gender_hint">Nữ</string>
+    <string name="add_product_origin">Xuất xứ</string>
+    <string name="add_product_origin_hint">Việt Nam</string>
+
+    <!-- Step 2 fields -->
+    <string name="add_product_sku">Mã sản phẩm</string>
+    <string name="add_product_sku_hint">KID-Đ-0001</string>
+    <string name="add_product_price">Giá bán</string>
+    <string name="add_product_price_hint">100000</string>
+    <string name="add_product_stock">Tồn kho</string>
+    <string name="add_product_stock_hint">12</string>
+
+    <!-- Step 3 -->
+    <string name="add_product_image_pick">Chọn ảnh đại diện</string>
+
+    <!-- Step 4 -->
+    <string name="add_product_category">Danh mục</string>
+    <string name="add_product_category_hint">Đầm ôm</string>
+    <string name="add_product_collection">Bộ sưu tập</string>
+    <string name="add_product_collection_hint">6</string>
+
+    <!-- Step 5 -->
+    <string name="add_product_status">Trạng thái</string>
+    <string name="add_product_visibility">Hiển thị</string>
+
+    <string name="add_product_cancel">Hủy</string>
+    <string name="add_product_back">Quay lại</string>
+    <string name="add_product_next">Tiếp</string>
+    <string name="add_product_save">Lưu sản phẩm</string>
+    <string name="add_product_saved">Đã lưu sản phẩm</string>
+    <string name="add_product_error_name">Vui lòng nhập tên sản phẩm</string>
+    <string name="add_product_error_sku">Vui lòng nhập mã sản phẩm</string>
+    <string name="add_product_error_price">Giá bán không hợp lệ</string>
 </resources>

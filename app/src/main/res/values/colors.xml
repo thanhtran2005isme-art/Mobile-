@@ -49,6 +49,17 @@
     <color name="profile_subcard_bg">#FFFFFF</color>
     <color name="profile_icon_bg">#FFF3EC</color>
 
+    <!-- Admin product status -->
+    <color name="admin_status_green">#15803D</color>
+    <color name="admin_status_green_bg">#DCFCE7</color>
+    <color name="admin_status_red">#B91C1C</color>
+    <color name="admin_status_red_bg">#FEE2E2</color>
+    <color name="admin_status_amber">#A16207</color>
+    <color name="admin_status_amber_bg">#FEF3C7</color>
+    <color name="admin_field_bg">#FAFAF9</color>
+    <color name="admin_chip_active_bg">#FFF3EC</color>
+    <color name="admin_chip_active_stroke">#FF6F1A</color>
+
     <!-- Login screen -->
     <color name="login_bg">#0B0B12</color>
     <color name="login_glow">#5B21B6</color>
