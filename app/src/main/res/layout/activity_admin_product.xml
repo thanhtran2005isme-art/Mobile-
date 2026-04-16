@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/productAdminRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_section"
+    tools:context=".ui.admin.product.AdminProductListActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/space_md"
+            android:paddingVertical="@dimen/space_sm">
+
+            <FrameLayout
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/ripple_circle"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/text_primary" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_sm"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/admin_product_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/admin_product_subtitle"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/space_md"
+                android:paddingTop="@dimen/space_md">
+
+                <!-- Search -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_admin_field"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/space_md">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_search" />
+
+                    <EditText
+                        android:id="@+id/searchInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/space_sm"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/admin_product_search_hint"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_muted"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/text_body" />
+                </LinearLayout>
+
+                <!-- Status filter chips -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_md"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chipAll"
+                        style="@style/Widget.App.AdminFilterChip" />
+
+                    <TextView
+                        android:id="@+id/chipSelling"
+                        style="@style/Widget.App.AdminFilterChip"
+                        android:layout_marginStart="@dimen/space_sm" />
+
+                    <TextView
+                        android:id="@+id/chipSoldOut"
+                        style="@style/Widget.App.AdminFilterChip"
+                        android:layout_marginStart="@dimen/space_sm" />
+
+                    <TextView
+                        android:id="@+id/chipDraft"
+                        style="@style/Widget.App.AdminFilterChip"
+                        android:layout_marginStart="@dimen/space_sm" />
+                </LinearLayout>
+
+                <!-- Category & collection chips -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chipCategory"
+                        style="@style/Widget.App.AdminFilterChip"
+                        tools:text="Danh mục: Tất cả" />
+
+                    <TextView
+                        android:id="@+id/chipCollection"
+                        style="@style/Widget.App.AdminFilterChip"
+                        android:layout_marginStart="@dimen/space_sm"
+                        tools:text="Bộ sưu tập: Tất cả" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/productCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_md"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_body"
+                    tools:text="Hiển thị 2/2 sản phẩm" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_admin_product" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- FAB -->
+        <TextView
+            android:id="@+id/fabAddProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/space_lg"
+            android:layout_marginBottom="@dimen/space_lg"
+            android:background="@drawable/bg_admin_btn_primary"
+            android:clickable="true"
+            android:elevation="6dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/space_xl"
+            android:text="@string/admin_product_add"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

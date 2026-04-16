@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Card "Bước x/5" + 5 chấm số nối line + tiêu đề + mô tả -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_admin_card"
+    android:orientation="vertical"
+    android:padding="@dimen/space_lg">
+
+    <TextView
+        android:id="@+id/stepBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/profile_orange"
+        android:textSize="@dimen/text_body"
+        android:textStyle="bold"
+        tools:text="Bước 1/5" />
+
+    <!-- 5 chấm với line nối -->
+    <LinearLayout
+        android:id="@+id/stepDotsRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/stepTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_subtitle"
+        android:textStyle="bold"
+        tools:text="Thông tin chính" />
+
+    <TextView
+        android:id="@+id/stepDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_body"
+        tools:text="Nhập tên sản phẩm…" />
+</LinearLayout>

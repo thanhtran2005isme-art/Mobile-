@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addProductRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_section"
+    tools:context=".ui.admin.product.AddProductActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/space_md"
+            android:paddingVertical="@dimen/space_sm">
+
+            <FrameLayout
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/ripple_circle"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/text_primary" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_sm"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_product_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/add_product_subtitle"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="80dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/space_md"
+            android:paddingTop="@dimen/space_md">
+
+            <include
+                android:id="@+id/stepIndicator"
+                layout="@layout/layout_step_indicator" />
+
+            <ViewFlipper
+                android:id="@+id/stepFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md">
+
+                <!-- ===== Step 1: Thông tin chính ===== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include android:id="@+id/fieldName" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldShortDesc" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldFullDesc" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldMaterial" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldStyle" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldBrand" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldPattern" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldSeason" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldBody" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldGender" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldOrigin" layout="@layout/layout_add_product_field" />
+                </LinearLayout>
+
+                <!-- ===== Step 2: Mã & giá ===== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include android:id="@+id/fieldSku" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldPrice" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldStock" layout="@layout/layout_add_product_field" />
+                </LinearLayout>
+
+                <!-- ===== Step 3: Hình ảnh ===== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginTop="@dimen/space_md"
+                        app:cardCornerRadius="@dimen/radius_lg"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/profile_card_stroke"
+                        app:strokeWidth="1dp">
+
+                        <ImageView
+                            android:id="@+id/imagePreview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bg_product_1" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/btnPickImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/admin_field_height"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:background="@drawable/bg_admin_btn_outline"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="@string/add_product_image_pick"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_body"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- ===== Step 4: Phân loại ===== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include android:id="@+id/fieldCategory" layout="@layout/layout_add_product_field" />
+                    <include android:id="@+id/fieldCollection" layout="@layout/layout_add_product_field" />
+                </LinearLayout>
+
+                <!-- ===== Step 5: Xuất bản ===== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:text="@string/add_product_status"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_body"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_sm"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/statusSelling"
+                            style="@style/Widget.App.AdminFilterChip"
+                            android:text="@string/admin_filter_selling" />
+
+                        <TextView
+                            android:id="@+id/statusSoldOut"
+                            style="@style/Widget.App.AdminFilterChip"
+                            android:layout_marginStart="@dimen/space_sm"
+                            android:text="@string/admin_filter_sold_out" />
+
+                        <TextView
+                            android:id="@+id/statusDraft"
+                            style="@style/Widget.App.AdminFilterChip"
+                            android:layout_marginStart="@dimen/space_sm"
+                            android:text="@string/admin_filter_draft" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_lg"
+                        android:text="@string/add_product_visibility"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_body"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchVisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_sm"
+                        android:checked="true"
+                        android:text="@string/admin_product_status_visible"
+                        android:textColor="@color/text_primary" />
+                </LinearLayout>
+            </ViewFlipper>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Footer buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_md">
+
+        <TextView
+            android:id="@+id/btnFooterLeft"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_admin_btn_outline"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/add_product_cancel"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnFooterRight"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_weight="1"
+            android:background="@drawable/bg_admin_btn_primary"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/add_product_next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
