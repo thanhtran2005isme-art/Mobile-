@@ -42,6 +42,20 @@
             android:configChanges="uiMode|orientation|screenSize"
             android:theme="@style/Theme.BanQuanAo"
             android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".ui.admin.product.AdminProductListActivity"
+            android:exported="false"
+            android:configChanges="uiMode|orientation|screenSize"
+            android:theme="@style/Theme.BanQuanAo"
+            android:parentActivityName=".ui.admin.AdminActivity" />
+
+        <activity
+            android:name=".ui.admin.product.AddProductActivity"
+            android:exported="false"
+            android:configChanges="uiMode|orientation|screenSize"
+            android:theme="@style/Theme.BanQuanAo"
+            android:parentActivityName=".ui.admin.product.AdminProductListActivity" />
     </application>
 
 </manifest>

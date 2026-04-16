@@ -123,8 +123,15 @@ public class AdminActivity extends AppCompatActivity {
         ((ImageView) item.findViewById(R.id.shortcutIcon)).setImageResource(iconRes);
         ((TextView) item.findViewById(R.id.shortcutTitle)).setText(titleRes);
         ((TextView) item.findViewById(R.id.shortcutDesc)).setText(descRes);
-        item.setOnClickListener(v -> Toast.makeText(this,
-                getString(titleRes) + " — sắp ra mắt", Toast.LENGTH_SHORT).show());
+        item.setOnClickListener(v -> {
+            if (titleRes == R.string.admin_shortcut_products) {
+                startActivity(new Intent(this,
+                        com.example.banquanao.ui.admin.product.AdminProductListActivity.class));
+            } else {
+                Toast.makeText(this,
+                        getString(titleRes) + " — sắp ra mắt", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     // ----- Recent activity -----------------------------------------------
