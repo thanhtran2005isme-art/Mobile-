@@ -56,6 +56,34 @@
             android:configChanges="uiMode|orientation|screenSize"
             android:theme="@style/Theme.BanQuanAo"
             android:parentActivityName=".ui.admin.product.AdminProductListActivity" />
+
+        <activity
+            android:name=".ui.admin.category.AdminCategoryListActivity"
+            android:exported="false"
+            android:configChanges="uiMode|orientation|screenSize"
+            android:theme="@style/Theme.BanQuanAo"
+            android:parentActivityName=".ui.admin.AdminActivity" />
+
+        <activity
+            android:name=".ui.admin.category.AddCategoryActivity"
+            android:exported="false"
+            android:configChanges="uiMode|orientation|screenSize"
+            android:theme="@style/Theme.BanQuanAo"
+            android:parentActivityName=".ui.admin.category.AdminCategoryListActivity" />
+
+        <activity
+            android:name=".ui.admin.category.AdminCategoryListActivity"
+            android:exported="false"
+            android:configChanges="uiMode|orientation|screenSize"
+            android:theme="@style/Theme.BanQuanAo"
+            android:parentActivityName=".ui.admin.AdminActivity" />
+
+        <activity
+            android:name=".ui.admin.category.AddCategoryActivity"
+            android:exported="false"
+            android:configChanges="uiMode|orientation|screenSize"
+            android:theme="@style/Theme.BanQuanAo"
+            android:parentActivityName=".ui.admin.category.AdminCategoryListActivity" />
     </application>
 
 </manifest>

@@ -127,6 +127,9 @@ public class AdminActivity extends AppCompatActivity {
             if (titleRes == R.string.admin_shortcut_products) {
                 startActivity(new Intent(this,
                         com.example.banquanao.ui.admin.product.AdminProductListActivity.class));
+            } else if (titleRes == R.string.admin_shortcut_categories) {
+                startActivity(new Intent(this,
+                        com.example.banquanao.ui.admin.category.AdminCategoryListActivity.class));
             } else {
                 Toast.makeText(this,
                         getString(titleRes) + " — sắp ra mắt", Toast.LENGTH_SHORT).show();
