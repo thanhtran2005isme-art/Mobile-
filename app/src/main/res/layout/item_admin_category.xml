@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/categoryRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_md"
+    android:background="@drawable/bg_admin_card"
+    android:orientation="vertical"
+    android:padding="@dimen/space_md">
+
+    <!-- Top: badge + name + meta -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/categoryLevelBadge"
+            android:layout_width="@dimen/admin_category_badge_size"
+            android:layout_height="@dimen/admin_category_badge_size"
+            android:background="@drawable/bg_category_level_badge"
+            android:gravity="center"
+            android:textColor="@color/profile_orange"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold"
+            tools:text="C1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/categoryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_subtitle"
+                android:textStyle="bold"
+                tools:text="Phụ nữ" />
+
+            <TextView
+                android:id="@+id/categoryMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_small"
+                tools:text="Slug: phu-nu • Thứ tự: 1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/categoryStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:background="@drawable/bg_admin_status_green"
+        android:paddingHorizontal="@dimen/space_sm"
+        android:paddingVertical="2dp"
+        android:textColor="@color/admin_status_green"
+        android:textSize="@dimen/text_caption"
+        android:textStyle="bold"
+        tools:text="Đang hiển thị" />
+
+    <!-- Action row 1: Thêm con + Sửa  (Thêm con ẩn nếu cấp 3) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/actionAddChild"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_admin_btn_outline"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/admin_category_action_add_child"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/actionEdit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/space_sm"
+            android:layout_weight="1"
+            android:background="@drawable/bg_admin_btn_outline"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/admin_category_action_edit"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Action row 2: Ẩn + Xóa -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/actionToggle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_admin_btn_outline"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold"
+            tools:text="Ẩn" />
+
+        <TextView
+            android:id="@+id/actionDelete"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/space_sm"
+            android:layout_weight="1"
+            android:background="@drawable/bg_admin_btn_danger"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/admin_category_action_delete"
+            android:textColor="@color/admin_status_red"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
