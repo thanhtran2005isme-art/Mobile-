@@ -265,4 +265,40 @@
     <string name="add_product_error_name">Vui lòng nhập tên sản phẩm</string>
     <string name="add_product_error_sku">Vui lòng nhập mã sản phẩm</string>
     <string name="add_product_error_price">Giá bán không hợp lệ</string>
+
+    <!-- Admin: Categories -->
+    <string name="admin_category_title">Quản lý danh mục</string>
+    <string name="admin_category_subtitle">Hiển thị rõ cây cha-con để quản lý đúng cấu trúc của màn Danh mục.</string>
+    <string name="admin_category_add">Thêm danh mục</string>
+    <string name="admin_category_stats">%1$d danh mục cấp 1 • %2$d danh mục con</string>
+    <string name="admin_category_tree">Cây danh mục</string>
+    <string name="admin_category_meta">Slug: %1$s • Thứ tự: %2$d</string>
+    <string name="admin_category_visible">Đang hiển thị</string>
+    <string name="admin_category_hidden">Đã ẩn</string>
+    <string name="admin_category_action_add_child">Thêm con</string>
+    <string name="admin_category_action_edit">Sửa</string>
+    <string name="admin_category_action_hide">Ẩn</string>
+    <string name="admin_category_action_show">Hiện</string>
+    <string name="admin_category_action_delete">Xóa</string>
+    <string name="admin_category_level_format">C%1$d</string>
+
+    <string name="add_category_title">Thêm danh mục</string>
+    <string name="add_category_edit_title">Sửa danh mục</string>
+    <string name="add_category_subtitle">Điền thông tin để tạo danh mục mới trong cây.</string>
+    <string name="add_category_name">Tên danh mục</string>
+    <string name="add_category_name_hint">Phụ nữ</string>
+    <string name="add_category_slug">Slug</string>
+    <string name="add_category_slug_hint">phu-nu</string>
+    <string name="add_category_level">Cấp danh mục</string>
+    <string name="add_category_parent">Danh mục cha</string>
+    <string name="add_category_parent_none">Không có (cấp 1)</string>
+    <string name="add_category_order">Thứ tự hiển thị</string>
+    <string name="add_category_order_hint">1</string>
+    <string name="add_category_visibility">Hiển thị trên app</string>
+    <string name="add_category_save">Lưu danh mục</string>
+    <string name="add_category_error_name">Vui lòng nhập tên danh mục</string>
+    <string name="add_category_error_slug">Slug không được để trống</string>
+    <string name="add_category_error_level">Cấp 2 và 3 phải chọn danh mục cha</string>
+    <string name="add_category_saved">Đã lưu danh mục</string>
+    <string name="admin_category_delete_confirm">Xóa danh mục \"%1$s\" và toàn bộ con của nó?</string>
 </resources>
