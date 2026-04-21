@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_md"
+    android:background="@drawable/bg_admin_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/space_lg">
+
+    <!-- Top: code + status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/orderCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_subtitle"
+            android:textStyle="bold"
+            tools:text="KK260429105918" />
+
+        <TextView
+            android:id="@+id/orderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_sm"
+            android:background="@drawable/bg_order_status_pending"
+            android:paddingHorizontal="@dimen/space_md"
+            android:paddingVertical="6dp"
+            android:textColor="@color/order_pending"
+            android:textSize="@dimen/text_caption"
+            android:textStyle="bold"
+            tools:text="Chờ xác nhận" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/orderCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_body"
+        tools:text="thanh • 0906264126" />
+
+    <TextView
+        android:id="@+id/orderDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_body"
+        tools:text="Ngày đặt: 29/04/2026" />
+
+    <!-- Total + update -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/orderTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/profile_orange"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="100.016.500đ" />
+
+        <TextView
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_admin_btn_outline"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/space_lg"
+            android:text="@string/admin_order_action_update"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
