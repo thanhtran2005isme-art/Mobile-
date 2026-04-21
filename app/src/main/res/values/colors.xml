@@ -60,6 +60,18 @@
     <color name="admin_chip_active_bg">#FFF3EC</color>
     <color name="admin_chip_active_stroke">#FF6F1A</color>
 
+    <!-- Order status -->
+    <color name="order_pending">#FF6F1A</color>
+    <color name="order_pending_bg">#FFF3EC</color>
+    <color name="order_confirmed">#1D4ED8</color>
+    <color name="order_confirmed_bg">#DBEAFE</color>
+    <color name="order_shipping">#7E22CE</color>
+    <color name="order_shipping_bg">#F3E8FF</color>
+    <color name="order_done">#15803D</color>
+    <color name="order_done_bg">#DCFCE7</color>
+    <color name="order_cancelled">#B91C1C</color>
+    <color name="order_cancelled_bg">#FEE2E2</color>
+
     <!-- Login screen -->
     <color name="login_bg">#0B0B12</color>
     <color name="login_glow">#5B21B6</color>

@@ -301,4 +301,20 @@
     <string name="add_category_error_level">Cấp 2 và 3 phải chọn danh mục cha</string>
     <string name="add_category_saved">Đã lưu danh mục</string>
     <string name="admin_category_delete_confirm">Xóa danh mục \"%1$s\" và toàn bộ con của nó?</string>
+
+    <!-- Admin: Orders -->
+    <string name="admin_order_title">Quản lý đơn hàng</string>
+    <string name="admin_order_subtitle">Theo dõi đơn, cập nhật trạng thái và thêm ghi chú quản trị khi cần.</string>
+    <string name="admin_order_search_hint">Tìm theo mã đơn, tên khách, số điện thoại</string>
+    <string name="admin_order_status_pending">Chờ xác nhận</string>
+    <string name="admin_order_status_confirmed">Đã xác nhận</string>
+    <string name="admin_order_status_shipping">Đang giao</string>
+    <string name="admin_order_status_done">Hoàn thành</string>
+    <string name="admin_order_status_cancelled">Đã hủy</string>
+    <string name="admin_order_count">%1$d đơn ở trạng thái %2$s</string>
+    <string name="admin_order_count_all">%1$d đơn hàng</string>
+    <string name="admin_order_date">Ngày đặt: %1$s</string>
+    <string name="admin_order_action_update">Cập nhật</string>
+    <string name="admin_order_update_title">Cập nhật trạng thái đơn %1$s</string>
+    <string name="admin_order_update_done">Đã cập nhật trạng thái</string>
 </resources>
